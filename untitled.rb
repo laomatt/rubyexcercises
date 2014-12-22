@@ -1,11 +1,13 @@
 
-
-
-
-def subset(array, indexs, indexe)
-  @arr=array
+class Sample
+  def initialize(array, indexs, indexe)
+ @arr=array
   @i=indexs
   @j=indexe
+  end
+
+
+def subset
     outarr=[]
     f=@i
     while f<=@j
@@ -15,11 +17,11 @@ def subset(array, indexs, indexe)
   outarr
 end
 
-
-yet=[1,2,3,0,0,0,0,0]
-
+end
 
 if __FILE__ == $0
-  puts subset([1,2,3,6,7,32,4,789,2,76,39], 2,5)
+
+  sampob=Sample.new([1,2,3,6,7,32,4,789,2,76,39], 2,5)
+  puts sampob.subset
   #puts yet
 end
