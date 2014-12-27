@@ -1,32 +1,9 @@
-
-#this reverse takes the input blog, (yield) and vereses each word
-#but preserves the order of the words
-
 def reverser
-
-  arr=yield.split
-
-  output=""
-
-  for g in arr
-    output<<g.reverse+" "
-  end
-
-output[output.length-1]=""
-
-return output
-
+  yield.split.map { |e| e.reverse }.join(" ")
 end
-
-
-def adder(num=1)
-  return num+yield
+def adder(n=1)
+  yield+n
 end
-
-
-def repeater(num=1)
-  num.times do
-    yield
-  end
+def repeater(n=1)
+  n.times do yield end
 end
-
